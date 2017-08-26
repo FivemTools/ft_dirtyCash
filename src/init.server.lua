@@ -20,6 +20,7 @@ RegisterServerEvent("ft_players:onResourceReady")
 AddEventHandler('ft_players:onResourceReady', function ()
 
   -- Get dirtyCash
+
   AddPlayerMethod('GetDirtyCash', function()
     return toFloat(self.dirtyCash)
   end)
@@ -30,6 +31,7 @@ AddEventHandler('ft_players:onResourceReady', function ()
   end)
 
   -- Add dirtyCash
+
   AddPlayerMethod('AddDirtyCash', function(mount)
     local dirtyCash = self.dirtyCash + mount
     self:SetDirtyCash(emitter, dirtyCash)
