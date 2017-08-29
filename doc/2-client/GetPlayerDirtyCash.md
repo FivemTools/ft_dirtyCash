@@ -6,5 +6,5 @@ GetPlayerDirtyCash()
 ## Exemples
 
 ```lua
-GetPlayerDirtyCash()
+exports.ft_dirtyCash:GetPlayerDirtyCash()
 ```

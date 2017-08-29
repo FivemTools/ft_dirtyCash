@@ -6,5 +6,5 @@ player:RemoveDirtyCash(50)
 ## Exemples
 
 ```lua
-
+player:RemoveDirtyCash(50)
 ```
