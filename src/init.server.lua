@@ -21,30 +21,30 @@ AddEventHandler('ft_players:onResourceReady', function ()
 
   -- Get dirtyCash
 
-  AddPlayerMethod('GetDirtyCash', function()
+  exports.ft_players:AddPlayerMethod('GetDirtyCash', function()
     return toFloat(self.dirtyCash)
   end)
 
   -- Set dirtyCash
-  AddPlayerMethod('SetDirtyCash', function(mount)
+  exports.ft_players:AddPlayerMethod('SetDirtyCash', function(mount)
     self.dirtyCash = mount
   end)
 
   -- Add dirtyCash
 
-  AddPlayerMethod('AddDirtyCash', function(mount)
+  exports.ft_players:AddPlayerMethod('AddDirtyCash', function(mount)
     local dirtyCash = self.dirtyCash + mount
     self:SetDirtyCash(emitter, dirtyCash)
   end)
 
   -- Remove dirtyCash
-  AddPlayerMethod('RemoveDirtyCash', function(mount)
+  exports.ft_players:AddPlayerMethod('RemoveDirtyCash', function(mount)
     local dirtyCash = self.dirtyCash - mount
     self:SetDirtyCash(emitter, dirtyCash)
   end)
 
   -- Give dirtyCash
-  AddPlayerMethod('GiveDirtyCash', function(player, mount)
+  exports.ft_players:AddPlayerMethod('GiveDirtyCash', function(player, mount)
     self:RemoveDirtyCash(mount)
     player:AddDirtyCash(mount)
   end)
